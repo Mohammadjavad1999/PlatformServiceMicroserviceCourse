@@ -5,7 +5,7 @@ using PlatformService.Models;
 
 namespace PlatformService.Data
 {
-    public class PlatformRepo : PlatformService.Data.IPlatformRep
+    public class PlatformRepo : PlatformService.Data.IPlatformRepo
     {
         public PlatformRepo(DataBaseContext context)
         {

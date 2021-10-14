@@ -1,6 +1,6 @@
 namespace PlatformService.Data
 {
-    public interface IPlatformRep
+    public interface IPlatformRepo
     {
         bool SaveChange();
         System.Collections.Generic.IEnumerable<PlatformService.Models.Platform> GetAll();

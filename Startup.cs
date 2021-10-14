@@ -28,9 +28,11 @@ namespace PlatformService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<Data.IPlatformRep, Data.PlatformRepo>();
+            services.AddScoped<Data.IPlatformRepo, Data.PlatformRepo>();
             services.AddDbContext<Data.DataBaseContext>(opt => opt.UseInMemoryDatabase("InMem"));
             services.AddControllers();
+    
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PlatformService", Version = "v1" });
